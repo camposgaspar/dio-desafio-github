@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - Flex</title>
+
+    <style>
+        .container{
+            display: flex;
+            border: 1px solid black;
+            max-width: 400px;
+            margin: 10px;
+        }
+
+        .item{
+            background: brown;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            margin: 5px;
+        }
+
+        .flex-1{
+            flex: 1;
+            /* grow = 1 srink = 1 basis = 0*/
+        }
+
+        .largura{
+            width: 200px;
+            /* min-width: 250px; */
+        }
+
+        .flex-2{
+            flex: 2;
+            /* grow = 2 srink = 1 basis = 0*/
+        }
+    </style>
+</head>
+<body>
+    <p>Flex: 1</p>
+    <div class="container">
+        <div class="item flex-1">1</div>
+        <div class="item flex-1">22</div>
+        <div class="item flex-1">333</div>
+        <div class="item flex-1">4444</div>
+        <div class="item flex-1">55555</div>
+    </div>
+
+    <p>Flex: Mix</p>
+    <div class="container">
+        <div class="item flex-1">1</div>
+        <div class="item flex-2">22</div>
+        <div class="item flex-2">333</div>
+        <div class="item flex-1">4444</div>
+        <div class="item flex-1">55555</div>
+    </div>
+
+    <p>Width Ignore -> basis = 0</p>
+    <div class="container">
+        <div class="item flex-1 largura">1</div>
+        <div class="item flex-1 largura">22</div>
+        <div class="item flex-1 largura">333</div>
+        <div class="item flex-1 largura">4444</div>
+        <div class="item flex-1 largura">55555</div>
+    </div>
+</body>
+</html>

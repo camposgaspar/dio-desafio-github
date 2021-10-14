@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            max-width: 350px;
+            border: 1px solid black;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .align-container{
+            align-items: center;
+        }
+        .item{
+            background-color: brown;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            margin: 5px;
+        }
+
+        .center{
+            align-self: center;
+        }
+
+        .start{
+            align-self: flex-start;
+        }
+
+        .end{
+            align-self: flex-end;
+        }
+
+        .baseline{
+            align-self: baseline;
+        }
+
+        .stetch{
+            align-self: stretch;
+        }
+
+        .auto{
+            align-self: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container align-container">
+        <div class="item auto">A</div>
+        <div class="item auto">BB</div>
+        <div class="item auto">CCC</div>
+        <div class="item auto">DDDDDDDDDDDDDDD</div>
+    </div>
+
+    <div class="container align-container">
+        <div class="item stretch">A</div>
+        <div class="item auto">BB</div>
+        <div class="item auto">CCC</div>
+        <div class="item end">DDDDDDDDDDDDDDD</div>
+    </div>
+</body>
+</html>
